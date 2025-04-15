@@ -1,0 +1,22 @@
+{
+  "ldap": {
+    "connection": {
+      "host": "ldap.example.com",
+      "port": 389,
+      "ssl": false,
+      "tls": false,
+      "bind_dn": "cn=admin,dc=example,dc=com",
+      "bind_password": "secretpassword"
+    },
+    "search": {
+      "base_dn": "dc=example,dc=com",
+      "scope": "subtree",
+      "filter": "(objectClass=person)",
+      "attributes": ["uid", "cn", "mail", "givenName", "sn"]
+    },
+    "timeout": {
+      "timeout": 30,
+      "network_timeout": 30
+    }
+  }
+}
